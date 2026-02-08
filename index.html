@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Learn Graphics Design</title>
+    <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +17,162 @@
     />
   </head>
   <body>
-    <h1>hello world</h1>
+    <header class="header-wrapper">
+      <div class="main-container header">
+        <a href="#" class="logo">
+          <img src="assets/icons/logo.svg" alt="Logo" />
+          <span class="logo-text">Hello World!</span>
+        </a>
+
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#">Course</a></li>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
+        </nav>
+        <button class="grid-toggle" aria-label="Toggle sidebar">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="3" y="3" width="7" height="7" fill="#2F5146" />
+            <rect x="14" y="3" width="7" height="7" fill="#2F5146" />
+            <rect x="3" y="14" width="7" height="7" fill="#2F5146" />
+            <rect x="14" y="14" width="7" height="7" fill="#2F5146" />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <div class="main-container">
+      <section class="hero-content">
+        <h1>
+          LEARN GRAPHICS <br />
+          DESIGN FOR LIFE
+        </h1>
+        <p class="hero-subtext">
+          Stay Informed, Stay Ahead: Unveiling the Future of Technology,
+          Gadgets, and Innovation<br />
+          Your Gateway to the Digital Universe - Where Innovation Meets Insight
+        </p>
+
+        <div class="social-proof">
+          <div class="student-count">
+            <div>5.1 K</div>
+            <span>Students All Over World</span>
+          </div>
+          <div class="avatars">
+            <img
+              src="assets/images/student_img1.png"
+              alt="Student 1"
+              class="avatar"
+            />
+            <img
+              src="assets/images/student_img2.png"
+              alt="Student 2"
+              class="avatar"
+            />
+            <img
+              src="assets/images/student_img3.png"
+              alt="Student 3"
+              class="avatar"
+            />
+          </div>
+        </div>
+
+        <div class="cta-group">
+          <button class="btn btn-primary">Book Your Seat</button>
+          <button class="btn btn-play">
+            <svg
+              width="69"
+              height="69"
+              viewBox="0 0 69 69"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M68.7959 34.3979C68.7959 43.5208 65.1718 52.2701 58.7209 58.7209C52.2701 65.1718 43.5208 68.7959 34.3979 68.7959C25.275 68.7959 16.5258 65.1718 10.0749 58.7209C3.62406 52.2701 0 43.5208 0 34.3979C0 25.275 3.62406 16.5258 10.0749 10.0749C16.5258 3.62406 25.275 0 34.3979 0C43.5208 0 52.2701 3.62406 58.7209 10.0749C65.1718 16.5258 68.7959 25.275 68.7959 34.3979ZM29.1952 21.8986C28.8738 21.6697 28.4955 21.5337 28.1019 21.5055C27.7083 21.4773 27.3145 21.558 26.9637 21.7388C26.6129 21.9195 26.3186 22.1933 26.1131 22.5301C25.9075 22.867 25.7987 23.254 25.7984 23.6486V45.1473C25.7987 45.5419 25.9075 45.9288 26.1131 46.2657C26.3186 46.6026 26.6129 46.8764 26.9637 47.0571C27.3145 47.2378 27.7083 47.3185 28.1019 47.2903C28.4955 47.2621 28.8738 47.1262 29.1952 46.8973L44.2443 36.1479C44.523 35.9491 44.7502 35.6865 44.9069 35.3821C45.0637 35.0777 45.1454 34.7403 45.1454 34.3979C45.1454 34.0556 45.0637 33.7181 44.9069 33.4137C44.7502 33.1094 44.523 32.8468 44.2443 32.6479L29.1952 21.8986Z"
+                fill="#FF9257"
+              />
+            </svg>
+
+            See Journey
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <section class="stats-banner">
+      <div class="main-container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <strong>6409</strong>
+            <span>Succes Story</span>
+          </div>
+          <div class="stat-item">
+            <strong>124</strong>
+            <span>Expert Instructor</span>
+          </div>
+          <div class="stat-item">
+            <strong>54.749</strong>
+            <span>Hours Tutored</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class="right-drawer">
+      <div class="drawer-content">
+        <button class="close-drawer" aria-label="Close sidebar">&times;</button>
+        <div class="image-grid">
+          <div class="grid-item item-1">
+            <img
+              src="assets/images/drawer-images/drawer-img-1.png"
+              alt="Student 1"
+            />
+          </div>
+          <div class="grid-item item-2">
+            <img
+              src="assets/images/drawer-images/drawer-img-2.png"
+              alt="Student 2"
+            />
+          </div>
+          <div class="grid-item item-3">
+            <img
+              src="assets/images/drawer-images/drawer-img-3.png"
+              alt="Student 3"
+            />
+          </div>
+          <div class="grid-item item-4">
+            <img
+              src="assets/images/drawer-images/drawer-img-4.png"
+              alt="Student 4"
+            />
+          </div>
+          <div class="grid-item item-5">
+            <img
+              src="assets/images/drawer-images/drawer-img-5.png"
+              alt="Student 5"
+            />
+          </div>
+          <div class="grid-item item-6">
+            <img
+              src="assets/images/drawer-images/drawer-img-6.png"
+              alt="Student 6"
+            />
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

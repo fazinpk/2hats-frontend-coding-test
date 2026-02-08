@@ -1,3 +1,12 @@
+:root {
+  --primary-color: #2f5146;
+  --accent-color: #ff9257;
+  --text-main: #151515;
+  --text-muted: #838383;
+  --white: #ffffff;
+  --max-width: 1440px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,5 +15,262 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #333;
+  color: var(--text-main);
+  line-height: normal;
+  overflow-x: hidden;
+  position: relative;
+  font-weight: 400;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/body-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-container {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: 0 118px;
+}
+
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: transparent;
+  width: 100%;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    padding-block 0.3s ease;
+  padding-block: 20px;
+}
+
+.header-wrapper.scrolled {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-block: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-right: auto;
+}
+
+.logo-text {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 84px;
+}
+
+nav a {
+  color: var(--text-muted);
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  width: fit-content;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  bottom: 22px;
+  right: -64px;
+  width: 46px;
+  height: 46px;
+  background-image: url("../assets/icons/star.svg");
+  background-size: 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.hero-subtext {
+  color: #2d3134;
+  font-size: 18px;
+  margin-bottom: 72px;
+  max-width: 600px;
+}
+
+.social-proof {
+  display: flex;
+  align-items: center;
+  margin-bottom: 72px;
+}
+
+.student-count {
+  max-width: 216px;
+}
+
+.student-count div {
+  font-size: 38px;
+}
+
+.student-count span {
+  font-size: 28px;
+  color: #202020;
+  opacity: 0.78;
+}
+
+.avatars {
+  display: flex;
+}
+
+.avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: -45px;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.cta-group {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.btn {
+  padding: 25px 72px;
+  border-radius: 50px;
+  font-weight: 400;
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgba(47, 81, 70, 0.9);
+  box-shadow: 0 6px 20px rgba(47, 81, 70, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-play {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.btn-play:hover {
+  gap: 14px;
+  color: var(--primary-color);
+}
+
+.stats-banner {
+  background-color: var(--accent-color);
+  padding-block: 42px;
+  margin-top: 106px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid #f7be2c;
+  color: var(--white);
+  padding-left: 22px;
+}
+
+.stat-item strong {
+  font-size: 56px;
+  font-weight: 600;
+}
+
+.stat-item span {
+  font-size: 24px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
